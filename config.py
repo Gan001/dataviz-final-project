@@ -1,2 +1,0 @@
-iex = "test"
-nyt = test
