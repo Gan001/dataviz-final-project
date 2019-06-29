@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<html>
+		
+	<head>
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+		<title>Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Final Project <span>by Edwin, Eric, Ganesh, and Omar</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+			
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="analysis.html">Analysis</a></li>
+					<li><a href="credits.html">Contact Us</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic03.jpg" alt="" />
+						</div>
+						<div class="content">
+							
+							<header class="align-center">
+								<h2>Methodology</h2>
+								<!-- <p>maecenas feugiat ex purus, quis volutpat lacus placerat</p> -->
+							</header>
+							<hr />
+							<ul>
+									<li>The dataset we utilized was from a Kaggle competition in regards to predicting visitors of restaurants in Japan.</li>
+									<li>Our data set included the following:
+									<ul>
+									<li>Specifically, we were given number of visitors</li>
+									<li>And number of reservations</li>
+									</ul>
+									</li>
+									<li>Because of the large amount of features, we decided a KNN algorithm would be best to predict visitor data.
+									<ul>
+									<li>(explain KNN)</li>
+									</ul>
+									</li>
+									</ul>
+									<p><strong>Pros</strong>:</p>
+									<ul>
+									<li>No assumptions about data &mdash; useful, for example, for nonlinear data</li>
+									<li>Simple algorithm &mdash; to explain and understand/interpret</li>
+									<li>High accuracy (relatively) &mdash; it is pretty high but not competitive in comparison to better supervised learning models</li>
+									<li>Versatile &mdash; useful for classification or regression</li>
+									</ul>
+									<p><strong>Cons</strong>:</p>
+									<ul>
+									<li>Computationally expensive &mdash; because the algorithm stores all of the training data</li>
+									<li>High memory requirement</li>
+									<li>Stores all (or almost all) of the training data</li>
+									<li>Prediction stage might be slow (with big N)</li>
+									<li>Sensitive to irrelevant features and the scale of the data</li>
+									</ul>
+									<p><strong>Quick summary of&nbsp;KNN</strong></p>
+									<ul>
+									<li>The algorithm can be summarized as:</li>
+									<li>A positive integer k is specified, along with a new sample</li>
+									<li>We select the k entries in our database which are closest to the new sample</li>
+									<li>We find the most common classification of these entries</li>
+									<li>This is the classification we give to the new sample</li>
+									</ul>
+									<p>A few other features of KNN:</p>
+									<ul>
+									<li>KNN stores the entire training dataset which it uses as its representation.</li>
+									<li>KNN does not learn any model.</li>
+									<li>KNN makes predictions just-in-time by calculating the similarity between an input sample and each training instance.</li>
+									</ul>
+									<p>&nbsp;</p>
+									<ul>
+									<li>As KNN would be most accurate using a data set that was proportional in nature, our final decision was to only utilize the air visitor&rsquo;s data set with the following features:
+									<ul>
+									<li>Area Name</li>
+									<li>Day of week</li>
+									<li>Week of the year
+									<ul>
+									<li>Excluded was:
+									<ul>
+									<li>Holidays</li>
+									<li>Genre Names.</li>
+									</ul>
+									</li>
+									<li>Holidays and Genre Names was excluded because not every region had holidays or all genre types.</li>
+									</ul>
+									</li>
+									<li><strong>Data Clean</strong>
+									<ul>
+									<li>The visitor data was given by day by hour. To make our data proportional we designated the 52 weeks we would measure and assigned each day its &ldquo;week&rdquo;.</li>
+									<li>This was done to help our algorithm understand seasons.</li>
+									</ul>
+									</li>
+									</ul>
+									</li>
+									</ul>
+									<p><strong>&nbsp;</strong></p>
+									<ul>
+									<li><strong>Results</strong>
+									<ul>
+									<li>Finally, when we tested, we got a R2 value of .667.</li>
+									<li>Below is the chart of how we decided on our Neighbors:</li>
+									</ul>
+									</li>
+									</ul>
+						</div>
+						
+					</div>
+				</div>
+				
+			</section>
+			<!-- Footer -->
+			<footer id="footer" class="wrapper">
+					<div class="inner">
+						<section>
+							<div class="box">
+								<div class="content">
+									<h2 class="align-center">Select Projection Sample</h2>
+									<hr />
+									<div class="field">
+											<label for="dept">Name of Province</label>
+											<div class="select-wrapper">
+												<select name="dept" id="dept">
+													<option value="">- Category -</option>
+													<option value=0>Fukuoka-ken Fukuoka-shi DaimyÅ</option>
+													<option value=1>Fukuoka-ken Fukuoka-shi Hakata Ekimae</option>
+													<option value=2>Fukuoka-ken Fukuoka-shi Momochi</option>
+													<option value=3>Fukuoka-ken Fukuoka-shi Shiobaru</option>
+													<option value=4>Fukuoka-ken Fukuoka-shi Takatori</option>
+													<option value=5>Fukuoka-ken Fukuoka-shi Torikai</option>
+													<option value=6>Fukuoka-ken Itoshima-shi Maebarunishi</option>
+													<option value=7>Fukuoka-ken KitakyÅ«shÅ«-shi None</option>
+													<option value=8>Fukuoka-ken KitakyÅ«shÅ«-shi ÅŒtemachi</option>
+													<option value=9>Fukuoka-ken Kurume-shi JÅnanmachi</option>
+													<option value=10>Fukuoka-ken Yame-shi Motomachi</option>
+													<option value=11>Hiroshima-ken Fukuyama-shi Higashisakuramachi</option>
+													<option value=12>Hiroshima-ken Hiroshima-shi Kokutaijimachi</option>
+													<option value=13>Hiroshima-ken Hiroshima-shi NagarekawachÅ</option>
+													<option value=14>HokkaidÅ Abashiri-shi Minami 6 JÅhigashi</option>
+													<option value=15>HokkaidÅ Asahikawa-shi 6 JÅdÅri</option>
+													<option value=16>HokkaidÅ Sapporo-shi Kotoni 2 JÅ</option>
+													<option value=17>HokkaidÅ Sapporo-shi Minami 3 JÅnishi</option>
+													<option value=18>HyÅgo-ken Himeji-shi Yasuda</option>
+													<option value=19>HyÅgo-ken Kakogawa-shi KakogawachÅ Kitazaike</option>
+													<option value=20>HyÅgo-ken KÅbe-shi KumoidÅri</option>
+													<option value=21>HyÅgo-ken KÅbe-shi MotomachidÅri</option>
+													<option value=22>HyÅgo-ken KÅbe-shi Sumiyoshi Higashimachi</option>
+													<option value=23>HyÅgo-ken Nishinomiya-shi RokutanjichÅ</option>
+													<option value=24>HyÅgo-ken Takarazuka-shi TÅyÅchÅ</option>
+													<option value=25>Miyagi-ken Sendai-shi Kamisugi</option>
+													<option value=26>Niigata-ken Nagaoka-shi ÅŒtedÅri</option>
+													<option value=27>Niigata-ken Niigata-shi GakkÅchÅdÅri 1 BanchÅ</option>
+													<option value=28>Shizuoka-ken Hamamatsu-shi MotoshirochÅ</option>
+													<option value=29>Shizuoka-ken Numazu-shi MiyukichÅ</option>
+													<option value=30>Shizuoka-ken Shizuoka-shi ÅŒtemachi</option>
+													<option value=31>TÅkyÅ-to BunkyÅ-ku Kasuga</option>
+													<option value=32>TÅkyÅ-to BunkyÅ-ku Sendagi</option>
+													<option value=33>TÅkyÅ-to Chiyoda-ku Kudanminami</option>
+													<option value=34>TÅkyÅ-to ChÅ«Å-ku Ginza</option>
+													<option value=35>TÅkyÅ-to ChÅ«Å-ku Tsukiji</option>
+													<option value=36>TÅkyÅ-to Itabashi-ku Itabashi</option>
+													<option value=37>TÅkyÅ-to Katsushika-ku Tateishi</option>
+													<option value=38>TÅkyÅ-to Kita-ku ÅŒjihonchÅ</option>
+													<option value=39>TÅkyÅ-to Koganei-shi HonchÅ</option>
+													<option value=40>TÅkyÅ-to KÅtÅ-ku Kameido</option>
+													<option value=41>TÅkyÅ-to KÅtÅ-ku TÅyÅ</option>
+													<option value=42>TÅkyÅ-to Machida-shi Morino</option>
+													<option value=43>TÅkyÅ-to Meguro-ku Kamimeguro</option>
+													<option value=44>TÅkyÅ-to Minato-ku Akasaka</option>
+													<option value=45>TÅkyÅ-to Minato-ku Roppongi</option>
+													<option value=46>TÅkyÅ-to Minato-ku ShibakÅen</option>
+													<option value=47>TÅkyÅ-to Nakano-ku Nakano</option>
+													<option value=48>TÅkyÅ-to Nerima-ku Toyotamakita</option>
+													<option value=49>TÅkyÅ-to Setagaya-ku Okusawa</option>
+													<option value=50>TÅkyÅ-to Setagaya-ku Sangenjaya</option>
+													<option value=51>TÅkyÅ-to Setagaya-ku Setagaya</option>
+													<option value=52>TÅkyÅ-to Shibuya-ku DÅgenzaka</option>
+													<option value=53>TÅkyÅ-to Shibuya-ku JingÅ«mae</option>
+													<option value=54>TÅkyÅ-to Shibuya-ku Shibuya</option>
+													<option value=55>TÅkyÅ-to Shinagawa-ku Higashigotanda</option>
+													<option value=56>TÅkyÅ-to Shinagawa-ku Hiromachi</option>
+													<option value=57>TÅkyÅ-to Shinjuku-ku KabukichÅ</option>
+													<option value=58>TÅkyÅ-to Shinjuku-ku Nishishinjuku</option>
+													<option value=59>TÅkyÅ-to Suginami-ku Asagayaminami</option>
+													<option value=60>TÅkyÅ-to Tachikawa-shi IzumichÅ</option>
+													<option value=61>TÅkyÅ-to TaitÅ-ku Higashiueno</option>
+													<option value=62>TÅkyÅ-to TaitÅ-ku Kuramae</option>
+													<option value=63>TÅkyÅ-to Toshima-ku Higashiikebukuro</option>
+													<option value=64>TÅkyÅ-to Toshima-ku Mejiro</option>
+													<option value=65>TÅkyÅ-to Toshima-ku Minamiikebukuro</option>
+													<option value=66>TÅkyÅ-to Toshima-ku Nishiikebukuro</option>
+													<option value=67>TÅkyÅ-to ÅŒta-ku Kamata</option>
+													<option value=68>TÅkyÅ-to ÅŒta-ku Kamiikedai</option>
+													<option value=69>ÅŒsaka-fu HigashiÅsaka-shi Aramotokita</option>
+													<option value=70>ÅŒsaka-fu Neyagawa-shi Honmachi</option>
+													<option value=71>ÅŒsaka-fu Sakai-shi Minamikawaramachi</option>
+													<option value=72>ÅŒsaka-fu ÅŒsaka-shi Fuminosato</option>
+													<option value=73>ÅŒsaka-fu ÅŒsaka-shi KyÅmachibori</option>
+													<option value=74>ÅŒsaka-fu ÅŒsaka-shi KyÅ«tarÅmachi</option>
+													<option value=75>ÅŒsaka-fu ÅŒsaka-shi NakanochÅ</option>
+													<option value=76>ÅŒsaka-fu ÅŒsaka-shi Shinmachi</option>
+													<option value=77>ÅŒsaka-fu ÅŒsaka-shi ÅŒgimachi</option>
+												</select>
+											</div>
+										</div>
+										
+										<ul class="actions align-center">
+											<li><input value="Calculate" class="button special" type="submit"></li>
+										</ul>
+									</form>
+								</div>
+							</div>
+						</section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
