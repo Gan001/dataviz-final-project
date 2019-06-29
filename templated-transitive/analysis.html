@@ -1,12 +1,10 @@
 <!DOCTYPE HTML>
-<!--
-	Transitive by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
+		
 	<head>
-		<title>Generic - Transitive by TEMPLATED</title>
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+		<title>Analysis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,13 +16,13 @@
 				<div class="logo"><a href="index.html">Final Project <span>by Edwin, Eric, Ganesh, and Omar</span></a></div>
 				<a href="#menu" class="toggle"><span>Menu</span></a>
 			</header>
-
+			
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="analysis.html">Analysis</a></li>
-					<li><a href="credits.html">Credits</a></li>
+					<li><a href="credits.html">Contact Us</a></li>
 					<li><a href="elements.html">Elements</a></li>
 				</ul>
 			</nav>
@@ -39,17 +37,120 @@
 						<div class="content">
 							
 							<header class="align-center">
-								<h2>Lorem ipsum dolor</h2>
-								<p>maecenas feugiat ex purus, quis volutpat lacus placerat</p>
+								<h2>Methodology</h2>
+								<!-- <p>maecenas feugiat ex purus, quis volutpat lacus placerat</p> -->
 							</header>
 							<hr />
-							<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p>
-							<p>Vivamus fermentum nibh vel pharetra blandit. Cras a purus urna. Sed et libero ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse id hendrerit felis. Nulla viverra tempor dui at congue. Pellentesque quis nulla ornare, congue nisi id, finibus nulla. Aliquam sit amet hendrerit purus. Donec libero massa, posuere fermentum eros sit amet, maximus fringilla augue. Maecenas at rhoncus lorem. Vivamus ultricies consequat est, efficitur convallis libero. Vivamus rutrum semper mauris, vitae consequat eros tempor ac. Pellentesque et ornare sapien</p>
+							<ul>
+									<li>The dataset we utilized was from a Kaggle competition in regards to predicting visitors of restaurants in Japan.</li>
+									<li>Our data set included the following:
+									<ul>
+									<li>Specifically, we were given number of visitors</li>
+									<li>And number of reservations</li>
+									</ul>
+									</li>
+									<li>Because of the large amount of features, we decided a KNN algorithm would be best to predict visitor data.
+									<ul>
+									<li>(explain KNN)</li>
+									</ul>
+
+									<p><strong>Pros</strong>:</p>
+									<ul>
+									<li>No assumptions about data &mdash; useful, for example, for nonlinear data</li>
+									<li>Simple algorithm &mdash; to explain and understand/interpret</li>
+									<li>High accuracy (relatively) &mdash; it is pretty high but not competitive in comparison to better supervised learning models</li>
+									<li>Versatile &mdash; useful for classification or regression</li>
+									</ul>
+									<p><strong>Cons</strong>:</p>
+									<ul>
+									<li>Computationally expensive &mdash; because the algorithm stores all of the training data</li>
+									<li>High memory requirement</li>
+									<li>Stores all (or almost all) of the training data</li>
+									<li>Prediction stage might be slow (with big N)</li>
+									<li>Sensitive to irrelevant features and the scale of the data</li>
+									</ul>
+									<p><strong>Quick summary of&nbsp;KNN</strong></p>
+									<ul>
+									<li>The algorithm can be summarized as:</li>
+									<li>A positive integer k is specified, along with a new sample</li>
+									<li>We select the k entries in our database which are closest to the new sample</li>
+									<li>We find the most common classification of these entries</li>
+									<li>This is the classification we give to the new sample</li>
+									</ul>
+									<p><strong>A few other features of KNN:</strong></p>
+									<ul>
+									<li>KNN stores the entire training dataset which it uses as its representation.</li>
+									<li>KNN does not learn any model.</li>
+									<li>KNN makes predictions just-in-time by calculating the similarity between an input sample and each training instance.</li>
+									<li>As KNN would be most accurate using a data set that was proportional in nature, 
+										our final decision was to only utilize the air visitor&rsquo;s data set with the following features:</li>
+									<ul><ul>
+									<li>Area Name</li>
+									<li>Day of week</li>
+									<li>Week of the year</li>
+									</ul></ul>
+									<li>Excluded was:</li>
+									<ul>
+									<li>Holidays</li>
+									<li>Genre Names.</li>
+									</ul>
+									<li>Holidays and Genre Names was excluded because not every region had holidays or all genre types.</li>
+									</li></ul>
+									<p><strong>Data Clean</strong>:</p>
+									<ul>
+									<li>The visitor data was given by day by hour. To make our data proportional we designated the 52 weeks we would measure and assigned each day its &ldquo;week&rdquo;.</li>
+									<li>This was done to help our algorithm understand seasons.</li></ul>
+
+									<p><strong>Results</strong>:</p>
+									<ul>
+									<li>Finally, when we tested, we got a R2 value of 0.6876079097284932.</li>
+									<li>Below is the chart of how we decided on our Neighbors:</li>
 						</div>
 						
 					</div>
 				</div>
 				
+			</section>
+			<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
+
+						<div>
+							<div class="box">
+								<div class="image fit2">
+									<img src="images/Method.JPG" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<h2>Methodolgy Flow Chart</h2>
+										<p>Our illustrated Methodolgy</p>
+									</header>
+									<hr />
+									<!-- <p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada. Praesent in sem ex. Morbi mattis sapien pretium tellus venenatis, at egestas urna ornare.</p> -->
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="box">
+								<div class="image fit2">
+									<br><br><br>
+									<img src="images/Kneighbors.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<h2>Training and Testing Accuracy</h2>
+										<p>By looking at the graph above we can see that 3 and 5 has the best accuracy but 5 was our optimal K with an accuracy of 68.76%.</p>
+									</header>
+									<hr />
+									<!-- <p>.</p> -->
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</section>
 			<!-- Footer -->
 			<footer id="footer" class="wrapper">

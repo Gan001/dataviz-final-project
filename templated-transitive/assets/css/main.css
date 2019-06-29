@@ -85,7 +85,11 @@
 	.container {
 		width: 80rem;
 	}
-
+	
+strong { 
+		font-weight: bold;
+		color: goldenrod;
+	  }
 	@media screen and (max-width: 1680px) {
 
 		.container.\31 25\25 {
@@ -1650,6 +1654,7 @@
 
 	strong, b {
 		font-weight: 400;
+		color: goldenrod;
 	}
 
 	em, i {
@@ -1778,7 +1783,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #555;
+		color: goldenrod;
 	}
 
 	blockquote {
@@ -2333,12 +2338,12 @@
 			display: block;
 			margin: 0 0 2rem 0;
 			width: 100%;
-			height: 600px;
+			height: 450px;
 		}
 
 			.image.fit img {
 				width: 100%;
-				height: 600px;
+				height: 450px;
 			}
 		.image.fit2 {
 				display: block;
@@ -2891,11 +2896,11 @@
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
-				color: #000;
+				color:goldenrod;
 			}
 
 			.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
-				color: #000;
+				color: goldenrod;
 			}
 
 			.wrapper.style2 blockquote {
